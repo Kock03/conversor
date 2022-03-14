@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,700;1,500&display=swap"
+        rel="stylesheet">
+    <title>Conversor de Moedas</title>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Conversor de Moedas</h1>
+    </div>
+    <div id="container">
+        <p class="convert_for">Converter <b>de</b></p>
+        <select class="select">
+            <option>R$ - Real Brasileiro</option>
+        </select>
+
+        <p class="convert">Converter <b>para</b></p>
+        <select class="select" id="select-moedas">
+            <option>US$ - Dólar</option>
+            <option>€ - Euro</option>
+        </select>
+
+        <p class="value"><b>Valor</b></p>
+        <input id="money" type="number" placeholder="R$ 10.000,00">
+
+        <button id="button">Converter</button>
+
+        <div class="container_intern">
+            <div class="country">
+                <img src="./images/brasil.png" alt="">
+                <p class="real">Real</p>
+                <p class="number" id="real">-</p>
+            </div>
+
+            <img id="arrow" src="./images/seta.png" alt="">
+            <div class="country">
+                <img id="flag_coin" src="./images/eua.png" >
+                <p class="dolar" id="text_coin">Dólar Americano</p>
+                <p class="number" id="input-moedas">-</p>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    * {
+        font-family: 'Roboto', sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        background: #2c2c2c;
+    }
+
+    #header {
+        background: #9657A5;
+        width: 375px;
+        height: 66px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 70px;
+    }
+
+    h1 {
+        color: #F4F4F4;
+        font-size: 24px;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    #container {
+        width: 375px;
+        background: #E5E5E5;
+        padding: 24px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .convert_for {
+        margin-bottom: 6px;
+        color: #777777;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+
+    }
+
+    .convert {
+        margin-top: 6px;
+        margin-bottom: 6px;
+        color: #777777;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .select {
+        background: #FFFFFF;
+        border: 1px solid #BBBBBB;
+        border-radius: 4px;
+        width: 327px;
+        height: 48px;
+        appearance: none;
+        outline: none;
+        cursor: pointer;
+        padding-left: 16px;
+        font-size: 16px;
+
+    }
+
+    .value {
+        color: #777777;
+        margin-top: 24px;
+        margin-bottom: 4px;
+        width: 34px;
+        height: 18px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    #money {
+        width: 327px;
+        height: 48px;
+        background: #FFFFFF;
+        border: 1px solid #BBBBBB;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        padding-left: 16px;
+        outline: none;
+        appearance: none;
+        font-size: 16px;
+
+    }
+
+    #button {
+        width: 327px;
+        height: 48px;
+        background: #CDD728;
+        border-radius: 25px;
+        margin-top: 24px;
+        color: #F4F4F4;
+        align-items: center;
+        cursor: pointer;
+        appearance: none;
+        display: block;
+        border: none;
+        margin-bottom: 36px;
+        font-weight: bold;
+        font-size: 18px;
+
+    }
+
+    #button:active{
+        opacity: 0.6;
+    }
+
+    .container_intern {
+        border: 1px solid #9657A5;
+        border-radius: 4px;
+        width: 327px;
+        height: 276px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .country {
+        text-align: center;
+    }
+
+    #arrow {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .real {
+        margin-bottom: 6px;
+        color: #777777;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .dolar {
+        margin-bottom: 6px;
+        color: #777777;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .number {
+        font-weight: bold;
+        font-size: 17px;
+    }
+</style>
+
+<script src="./scripts.js"></script>
+
+</html>
